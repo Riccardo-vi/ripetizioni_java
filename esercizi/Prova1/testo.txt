@@ -1,0 +1,59 @@
+Creare un sistema per gestire i diversi tipi di materiali presenti in una biblioteca utilizzando l'ereditarietà.
+
+Devi implementare un sistema per una biblioteca che gestisce diversi tipi di materiali: libri, riviste e DVD. Tutti questi materiali condividono alcune caratteristiche comuni, ma hanno anche caratteristiche specifiche.
+Requisiti
+
+1. Classe Base: MaterialeBiblioteca
+Crea una classe MaterialeBiblioteca con i seguenti attributi:
+
+
+* titolo (String)
+* annoPubblicazione (int)
+* codice (String) - un codice identificativo univoco
+* prestato (boolean) - indica se il materiale è attualmente in prestito
+
+Implementa i seguenti metodi:
+
+* Un costruttore che inizializza tutti gli attributi (prestato deve essere false di default)
+* prestito() - imposta prestato a true e stampa un messaggio
+* restituzione() - imposta prestato a false e stampa un messaggio
+* getInfo() - restituisce una stringa con le informazioni base del materiale
+* I getter e setter necessari
+
+2. Classe Libro (estende MaterialeBiblioteca)
+Aggiungi gli attributi specifici:
+
+
+* autore (String)
+* numeroPagine (int)
+
+Sovrascrivi il metodo getInfo() per includere anche autore e numero di pagine.
+
+3. Classe Rivista (estende MaterialeBiblioteca)
+Aggiungi gli attributi specifici:
+
+
+* numeroEdizione (int)
+* mese (String)
+
+Sovrascrivi il metodo getInfo() per includere anche il numero di edizione e il mese.
+
+4. Classe DVD (estende MaterialeBiblioteca)
+Aggiungi gli attributi specifici:
+
+
+* regista (String)
+* durata (int) - durata in minuti
+
+Sovrascrivi il metodo getInfo() per includere anche regista e durata.
+
+5. Main
+Nel metodo main:
+
+
+* Crea almeno 2 oggetti per ogni tipo di materiale (Libro, Rivista, DVD)
+* Stampa le informazioni di tutti i materiali creati
+* Esegui il prestito di alcuni materiali
+* Prova a prestare un materiale già prestato
+* Restituisci alcuni materiali
+* Stampa nuovamente le informazioni per verificare lo stato dei prestiti
