@@ -3,6 +3,11 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
         RegistroStudente registro = new RegistroStudente("Mario Rossi");
+        try {
+            registro.calcolaMedia();                            // Questo dovrebbe lanciare IllegalStateException
+        } catch (IllegalStateException e) {
+            System.out.println(e.getMessage());
+        }
 
         try {
             registro.aggiungiVoto(8.5);
@@ -20,12 +25,6 @@ public class Main {
         for (int i = 0; i < 10; i++) 
             registro.aggiungiAssenza();
         
-        try {
-            registro.calcolaMedia();                            // Questo dovrebbe lanciare IllegalStateException
-        } catch (IllegalStateException e) {
-            System.out.println(e.getMessage());
-        }
-
         try {
             registro.salvaPagella("pagella.txt");               // Questo dovrebbe lanciare LimiteAssenzeSuperatoException
         } catch (LimiteAssenzeSuperatoException | IOException e) {
