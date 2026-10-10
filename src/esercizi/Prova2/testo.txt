@@ -3,46 +3,46 @@ Realizzare un sistema per la gestione dei voti e delle assenze di un singolo stu
 Il sistema deve prevenire l'inserimento di dati sballati e gestire correttamente le regole della scuola (es. tetto massimo di assenze), 
 salvando infine la situazione su un file di testo in modo sicuro.
 
-A. L'Eccezione Personalizzata (Regola di Business)
+A. L'Eccezione Personalizzata (Regola di Business) ---V
 Creare la classe LimiteAssenzeSuperatoException.
 
 
-* Deve estendere la classe Exception (deve quindi essere una Checked Exception).
+* Deve estendere la classe Exception (deve quindi essere una Checked Exception).  -------V
 * Il costruttore deve accettare un intero (il numero di assenze attuali) e generare un messaggio: 
 "Impossibile scrutinare lo studente: limite di 10 assenze superato. (Assenze attuali: X)".
 
 
-B. La Classe di Logica (RegistroStudente.java)
+B. La Classe di Logica (RegistroStudente.java)-------V
 Creare la classe RegistroStudente che contiene le variabili private nomeStudente (String), sommaVoti (double), numeroVoti (int) e assenze (int).
 Dovrà avere i seguenti metodi:
 
-* aggiungiAssenza(): Incrementa semplicemente il contatore delle assenze.
+* aggiungiAssenza(): Incrementa semplicemente il contatore delle assenze.-------V
 
-* aggiungiVoto(double voto): Unchecked Exception: Se il voto inserito è minore di 1 o maggiore di 10, il metodo deve lanciare una IllegalArgumentException con un messaggio appropriato 
+* aggiungiVoto(double voto): Unchecked Exception: Se il voto inserito è minore di 1 o maggiore di 10, il metodo deve lanciare una IllegalArgumentException con un messaggio appropriato -------V
 (es. "Voto non valido! Deve essere compreso tra 1 e 10"). Se il voto è valido, aggiorna sommaVoti e numeroVoti.
 
-* calcolaMedia(): Unchecked Exception: Se non ci sono voti inseriti (numeroVoti == 0), non è possibile calcolare la media (divisione per zero). 
+* calcolaMedia(): Unchecked Exception: Se non ci sono voti inseriti (numeroVoti == 0), non è possibile calcolare la media (divisione per zero). -------V
 Lanciare una IllegalStateException per avvisare che mancano i dati. Altrimenti, restituisce la media matematica
 
-* salvaPagella(String nomeFile): User-Defined Exception: Prima di salvare, controlla se le assenze sono maggiori di 10. Se sì, deve lanciare la LimiteAssenzeSuperatoException. 
+* salvaPagella(String nomeFile): User-Defined Exception: Prima di salvare, controlla se le assenze sono maggiori di 10. Se sì, deve lanciare la LimiteAssenzeSuperatoException. -------V
 Checked Exception: Se le assenze sono ok, deve aprire un file e scriverci dentro il nome dello studente, le assenze e la media. Vincolo Architetturale: 
 L'apertura e la scrittura del file devono essere fatte rigorosamente utilizzando il costrutto Try-with-resources per gestire in automatico la IOException e la chiusura dello stream. 
 Il metodo deve usare la clausola throws per delegare gli errori al main.
 
 
-C. L'Interfaccia Utente (Main.java)
+C. L'Interfaccia Utente (Main.java)-------V
 Nel metodo main, istanziare un RegistroStudente e simulare alcune operazioni:
 
-* Inserire voti corretti e voti errati (per testare l'Unchecked Exception).
-* Inserire 11 assenze (per testare la Custom Exception).
-* Provare a chiamare salvaPagella("pagella.txt").
-* Avvolgere le chiamate in un blocco try-catch multiplo, catturando in modo specifico
+* Inserire voti corretti e voti errati (per testare l'Unchecked Exception).-------V
+* Inserire 11 assenze (per testare la Custom Exception).-------V
+* Provare a chiamare salvaPagella("pagella.txt").-------V
+* Avvolgere le chiamate in un blocco try-catch multiplo, catturando in modo specifico-------V
 
 1. IllegalArgumentException
 2. IllegalStateException
 3. LimiteAssenzeSuperatoException
 4.IOException
 
-Stampare per ogni catch il messaggio di errore tramite e.getMessage().
+Stampare per ogni catch il messaggio di errore tramite e.getMessage().-------V
 
 Utilizzare un blocco finally per stampare sempre: "Operazioni sul registro terminate per la sessione corrente."

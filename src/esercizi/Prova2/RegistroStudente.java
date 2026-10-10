@@ -1,6 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import esercizi.Prova2.LimiteAssenzeSuperatoException;
 
 public class RegistroStudente {
     private String nomeStudente;
