@@ -8,7 +8,8 @@ Creare la classe LimiteAssenzeSuperatoException.
 
 
 * Deve estendere la classe Exception (deve quindi essere una Checked Exception).
-* Il costruttore deve accettare un intero (il numero di assenze attuali) e generare un messaggio: "Impossibile scrutinare lo studente: limite di 10 assenze superato. (Assenze attuali: X)".
+* Il costruttore deve accettare un intero (il numero di assenze attuali) e generare un messaggio: 
+"Impossibile scrutinare lo studente: limite di 10 assenze superato. (Assenze attuali: X)".
 
 
 B. La Classe di Logica (RegistroStudente.java)
