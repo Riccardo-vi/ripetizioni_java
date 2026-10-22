@@ -1,6 +1,7 @@
 Creare un sistema per gestire i diversi tipi di materiali presenti in una biblioteca utilizzando l'ereditarietà.
 
-Devi implementare un sistema per una biblioteca che gestisce diversi tipi di materiali: libri, riviste e DVD. Tutti questi materiali condividono alcune caratteristiche comuni, ma hanno anche caratteristiche specifiche.
+Devi implementare un sistema per una biblioteca che gestisce diversi tipi di materiali: libri, riviste e DVD. 
+Tutti questi materiali condividono alcune caratteristiche comuni, ma hanno anche caratteristiche specifiche.
 Requisiti
 
 1. Classe Base: MaterialeBiblioteca
