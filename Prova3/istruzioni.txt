@@ -1,0 +1,60 @@
+ti mando ultimo esercizio in preparazione:
+
+Dovete creare le seguenti classi e interfacce:
+- Una classe astratta 'Veicolo' che rappresenta un veicolo generico, con attributi per la velocità massima e metodi per accelerare, decelerare e ottenere la velocità massima.
+- Una classe astratta 'VeicoloTerrestre' che estende 'Veicolo' e rappresenta un veicolo terrestre con un attributo per il numero di ruote.
+- Una classe 'Auto' che estende 'VeicoloTerrestre' e rappresenta un'automobile con un attributo per il modello.
+- Una classe astratta 'VeicoloAereo' che estende 'Veicolo' e rappresenta un veicolo aereo con un attributo per l'altezza massima.
+- Una classe 'Drone' che estende 'VeicoloAereo' e rappresenta un drone con un attributo per la marca.
+- Una classe astratta 'VeicoloMarino' che estende 'Veicolo' e rappresenta un veicolo marino con un attributo per la capacità di galleggiamento.
+- Una classe 'Nave' che estende 'VeicoloMarino' e rappresenta una nave con un attributo per il nome.
+
+Ulteriori specifiche:
+
+1. Classe 'Auto':
+   Attributi aggiuntivi:
+   - colore (String)
+   - numeroPosti (int)
+   
+   Metodi aggiuntivi:
+   - `suonaClacson(): void` - emette il suono del clacson dell'auto.
+   - `accendiLuci(): void` - accende le luci dell'auto.
+   
+   Metodi con gestione delle eccezioni:
+   - `setNumeroPosti(int numeroPosti): void` - imposta il numero di posti dell'auto.
+     Se il numero di posti specificato è minore o uguale a 0, lancia un'eccezione IllegalArgumentException.
+   - `setColor(String colore): void` - imposta il colore dell'auto.
+     Se il colore specificato è una stringa vuota o nulla, lancia un'eccezione IllegalArgumentException.
+
+1. Classe 'Drone':
+   Attributi aggiuntivi:
+   - autonomia (double)
+   - altezzaMaxSorvolo (double)
+   
+   Metodi aggiuntivi:
+   - `attivaModalitàScatto(): void` - attiva la modalità scatto per il drone.
+   - `getAutonomia(): double` - restituisce l'autonomia del drone in ore di volo.
+   
+   Metodi con gestione delle eccezioni:
+   - `setAutonomia(double autonomia): void` - imposta l'autonomia del drone.
+     Se l'autonomia specificata è minore o uguale a 0, lancia un'eccezione IllegalArgumentException.
+   - `setAltezzaMaxSorvolo(double altezza): void` - imposta l'altezza massima di sorvolo del drone.
+     Se l'altezza specificata è minore o uguale a 0, lancia un'eccezione IllegalArgumentException.
+
+1. Classe 'Nave':
+   Attributi aggiuntivi:
+   - capacitàPasseggeri (int)
+   - stazza (double)
+   
+   Metodi aggiuntivi:
+   - `attivaSOS(): void` - attiva il segnale di soccorso della nave.
+   - `getCapacitàPasseggeri(): int` - restituisce la capacità massima di passeggeri della nave.
+   
+   Metodi con gestione delle eccezioni:
+   - `setCapacitàPasseggeri(int capacità): void` - imposta la capacità massima di passeggeri della nave.
+     Se la capacità specificata è minore o uguale a 0, lancia un'eccezione IllegalArgumentException.
+   - `setStazza(double stazza): void` - imposta la stazza della nave.
+     Se la stazza specificata è minore o uguale a 0, lancia un'eccezione IllegalArgumentException.
+
+Inoltre, assicuratevi di implementare tutti i metodi richiesti e fornire le specifiche dettagliate per ciascuna classe e interfaccia. 
+Il Main di test è allegato al testo.
