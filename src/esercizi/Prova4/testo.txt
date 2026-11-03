@@ -1,0 +1,58 @@
+Esercizio 1: Sistema di Gestione Dispositivi Elettronici
+
+--------------------------------------------------------
+ creare le seguenti classi e interfacce:
+
+- Una classe astratta 'Dispositivo' che rappresenta un dispositivo generico, con attributi per il 'prezzoBase' e metodi per accendere, spegnere e ottenere il prezzo.
+- Una classe astratta 'DispositivoMobile' che estende 'Dispositivo' e rappresenta un dispositivo portatile con un attributo per la 'capacitaBatteria' (in mAh).
+- Una classe 'Smartphone' che estende 'DispositivoMobile' e rappresenta un telefono con un attributo per il 'modello'.
+- Una classe astratta 'DispositivoFisso' che estende 'Dispositivo' e rappresenta un dispositivo fisso con un attributo per il 'consumoEnergetico' (in Watt).
+- Una classe 'Server' che estende 'DispositivoFisso' e rappresenta un server aziendale con un attributo per il 'nomeHost'.
+
+Ulteriori specifiche:
+
+1. Classe 'Smartphone':
+
+   Attributi aggiuntivi: 
+
+   - sistemaOperativo (String)
+
+   - memoriaGB (int)
+
+   Metodi aggiuntivi: 
+
+   - effettuaChiamata(String numero): void - stampa a schermo il tentativo di chiamata.
+
+   Metodi con gestione delle eccezioni: 
+
+   - setMemoriaGB(int memoriaGB): void - se la memoria specificata e' minore o uguale a 0, lancia un'eccezione IllegalArgumentException.
+
+   - setSistemaOperativo(String so): void - se la stringa e' vuota o nulla, lancia IllegalArgumentException.
+
+2. Classe 'Server':
+
+   Attributi aggiuntivi: 
+
+   - numeroProcessori (int)
+
+   - indirizzoIP (String)
+
+   Metodi aggiuntivi: 
+
+   - riavviaServizi(): void - simula il riavvio del server (semplice stampa).
+
+   Metodi con gestione delle eccezioni:
+
+   - setNumeroProcessori(int num): void - se il numero specificato e' minore o uguale a 0, lancia IllegalArgumentException.
+
+   - setPrezzoBase(double prezzo): void - se il prezzo e' negativo, lancia IllegalArgumentException.
+
+--------------------------------------------------------
+
+Cosa testare nel Main per verificare di aver fatto tutto correttamente:
+
+1. Creare un oggetto 'Smartphone' e un oggetto 'Server' passando valori validi ai rispettivi costruttori.
+2. Testare i metodi ereditati (accendere, spegnere) e stampare il prezzo di entrambi i dispositivi.
+3. Testare i metodi specifici chiamando effettuaChiamata() sullo smartphone e riavviaServizi() sul server.
+4. Testare le eccezioni dello Smartphone: usare dei blocchi try-catch per provare a impostare la memoria a -10 (setMemoriaGB) e il sistema operativo a una stringa vuota (setSistemaOperativo), verificando che il programma non si blocchi ma catturi l'errore.
+5. Testare le eccezioni del Server: usare dei blocchi try-catch per provare a impostare il numero di processori a 0 (setNumeroProcessori) e il prezzo base a un valore negativo (setPrezzoBase), verificando la corretta cattura dell'eccezione.
